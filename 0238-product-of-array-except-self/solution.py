@@ -4,15 +4,13 @@ class Solution:
         o = [1]*n
 
         left = 1
-        for i in range(n):
+        for i in range(len(nums)):
             o[i] *= left
             left*=nums[i]
 
         right = 1
-        for i in range(n-1,-1,-1):
+        for  i in range(len(nums)-1,-1,-1):
             o[i]*=right
-            right*=nums[i]
-        
-        return o
-        
+            right*= nums[i]
 
+        return o
