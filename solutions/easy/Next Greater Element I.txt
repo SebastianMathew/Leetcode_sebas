@@ -1,0 +1,18 @@
+// Title: Next Greater Element I
+            // Difficulty: Easy
+            // Language: Python3
+            // Link: https://leetcode.com/problems/next-greater-element-i/
+
+from collections import defaultdict
+
+class Solution:
+    def nextGreaterElement(self, nums1: list[int], nums2: list[int]) -> list[int]:
+        result = defaultdict(lambda : -1)
+
+        stack = []
+        for num in nums2:
+            while stack and num>stack[-1]:
+                el = stack.pop()
+                result[el] = num
+            stack.append(num)
+
