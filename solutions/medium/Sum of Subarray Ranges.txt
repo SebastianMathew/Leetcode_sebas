@@ -1,0 +1,18 @@
+// Title: Sum of Subarray Ranges
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/sum-of-subarray-ranges/
+
+                    idx = stack.pop()
+                    l = idx+1 if not stack else idx - stack[-1]
+        for i in range(n):
+                while stack and nl[i]<=nl[stack[-1]]:
+        stack = []
+        summ = 0
+
+        n = len(nl)
+        nl = nums+ [minn-1]
+        minn = min(nums)
+
+    def subArrayRanges(self, nums: list[int]) -> int:
+class Solution:
